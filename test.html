@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang='cn'>
+<head>
+	<title>jquery test</title>
+	<script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
+	<script>
+		function disable_by_js()
+		{
+			document.getElementById('by_id').disabled=true
+		}
+
+	</script>
+	<script>
+		$(document).ready(function(){
+
+			$('#jquery').click(function(){
+				$('#by_id').hide();
+			});
+
+		});
+	</script>
+	<script >
+		$(document).ready(function(){
+			$('#button').click(function(){
+				$('#by_id').attr('disabled','disabled');
+			});
+		});
+	</script>
+
+</head>
+<body>
+	<input id='by_id' class='by_class'/>
+
+	<input type="button" onclick='disable_by_js()' value='点我输入框灰显_js'/> 
+	<input id='jquery' type="button" value='点我输入框消失_jquery'/> 
+	<input id='button' type="button"  value='点我输入框灰显_jquery'/> 
+	
+
+</body>
+</html>
